@@ -1,4 +1,4 @@
-public class Bus extends Vehicle{
+public class Bus extends AbstractVehicle implements PublicTransport{
 
     private boolean hasRamp;
     private boolean automaticDoors;
@@ -53,5 +53,29 @@ public class Bus extends Vehicle{
 
     public void setRouteNumber(boolean routeNumber) {
         this.routeNumber = routeNumber;
+    }
+
+    @Override
+    public int getWheelCount() {
+        return 6;
+    }
+
+    @Override
+    public void pickUpPassengers() {
+        System.out.println("The bus can accommodate more than 60 passengers!");
+
+    }
+    @Override
+    public void dropOffPassengers() {
+        System.out.println("Can drop people off at bus stops.");
+
+    }
+    @Override
+    public boolean announceNextStop() {
+        return true;
+    }
+    @Override
+    public double calculateFare() {
+        return 5;
     }
 }

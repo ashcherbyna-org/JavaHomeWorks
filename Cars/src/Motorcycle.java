@@ -1,4 +1,4 @@
-public class Motorcycle extends Vehicle{
+public class Motorcycle extends AbstractVehicle{
     private boolean sideCar;
     private boolean hasTrunk;
     private boolean footrests;
@@ -53,4 +53,10 @@ public class Motorcycle extends Vehicle{
     public void setHelmet(boolean helmet) {
         this.helmet = helmet;
     }
+
+    @Override
+    public int getWheelCount() {
+        return 2;
+    }
+
 }

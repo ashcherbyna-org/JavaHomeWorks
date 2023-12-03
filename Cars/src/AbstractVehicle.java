@@ -1,11 +1,11 @@
-public class Vehicle {
+public abstract class AbstractVehicle {
     private String model;
     private String VIN;
     private String manufacturer;
     private boolean hasAirBags;
     private boolean isAutomaticTransmission;
 
-    public Vehicle(String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission) {
+    public AbstractVehicle(String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission) {
         this.model = model;
         this.VIN = VIN;
         this.manufacturer = manufacturer;
@@ -52,4 +52,5 @@ public class Vehicle {
     public void setAutomaticTransmission(boolean automaticTransmission) {
         isAutomaticTransmission = automaticTransmission;
     }
+    public abstract int getWheelCount();
 }

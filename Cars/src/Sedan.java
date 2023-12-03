@@ -1,4 +1,4 @@
-public class Sedan extends Vehicle{
+public class Sedan extends AbstractVehicle{
     private boolean hasPassengerSeats;
     private boolean hasBabySeat;
     private boolean hasConvertibleRoof;
@@ -52,5 +52,10 @@ public class Sedan extends Vehicle{
 
     public void setLuke(boolean luke) {
         this.luke = luke;
+    }
+
+    @Override
+    public int getWheelCount() {
+        return 4;
     }
 }

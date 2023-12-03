@@ -1,4 +1,4 @@
-public class Truck extends Vehicle{
+public class Truck extends AbstractVehicle{
     private int countofSpleppingPlaces;
     private boolean hasCargoRefrigerator;
     private int carrying;
@@ -52,5 +52,10 @@ public class Truck extends Vehicle{
 
     public void setTractorCrane(boolean tractorCrane) {
         this.tractorCrane = tractorCrane;
+    }
+
+    @Override
+    public int getWheelCount() {
+        return 6;
     }
 }
