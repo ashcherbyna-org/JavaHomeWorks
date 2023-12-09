@@ -1,3 +1,6 @@
+import vehicles.builders.TruckBuilder;
+import vehicles.Truck;
+
 public class Main {
     public static void main(String[] args) {
        Truck carTransporter = new TruckBuilder()
@@ -13,5 +16,7 @@ public class Main {
                .setTractorCrane(true)
                .createTruck();
        System.out.printf("%s developed in %s with VIN %s", carTransporter.getModel(),carTransporter.getManufacturer(),carTransporter.getVIN ());
+        System.out.println();
+       System.out.println(carTransporter);
     }
 }

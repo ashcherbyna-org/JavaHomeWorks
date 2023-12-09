@@ -1,3 +1,5 @@
+package vehicles.abstractions;
+
 public abstract class AbstractVehicle {
     private String model;
     private String VIN;

@@ -1,4 +1,8 @@
-public class  SedanTaxi extends Sedan implements PublicTransport{
+package vehicles;
+
+import vehicles.interfaces.PublicTransport;
+
+public class  SedanTaxi extends Sedan implements PublicTransport {
     public SedanTaxi(String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, boolean hasPassengerSeats, boolean hasBabySeat, boolean hasConvertibleRoof, boolean ABS, boolean luke) {
         super(model, VIN, manufacturer, hasAirBags, isAutomaticTransmission, hasPassengerSeats, hasBabySeat, hasConvertibleRoof, ABS, luke);
     }
@@ -18,5 +22,10 @@ public class  SedanTaxi extends Sedan implements PublicTransport{
     @Override
     public double calculateFare() {
         return 100;
+    }
+
+    @Override
+    public String toString() {
+        return "SedanTaxi{} " + super.toString();
     }
 }

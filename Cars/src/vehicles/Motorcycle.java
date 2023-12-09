@@ -1,4 +1,8 @@
-public class Motorcycle extends AbstractVehicle{
+package vehicles;
+
+import vehicles.abstractions.AbstractVehicle;
+
+public class Motorcycle extends AbstractVehicle {
     private boolean sideCar;
     private boolean hasTrunk;
     private boolean footrests;
@@ -59,4 +63,15 @@ public class Motorcycle extends AbstractVehicle{
         return 2;
     }
 
+    @Override
+    public String toString() {
+        final var sb = new StringBuffer("Motorcycle{");
+        sb.append("sideCar=").append(sideCar);
+        sb.append(", hasTrunk=").append(hasTrunk);
+        sb.append(", footrests=").append(footrests);
+        sb.append(", verticalFit=").append(verticalFit);
+        sb.append(", helmet=").append(helmet);
+        sb.append('}');
+        return sb.toString();
+    }
 }

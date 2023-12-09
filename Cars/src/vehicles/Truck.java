@@ -1,4 +1,10 @@
-public class Truck extends AbstractVehicle{
+package vehicles;
+
+import vehicles.abstractions.AbstractVehicle;
+
+import java.util.StringJoiner;
+
+public class Truck extends AbstractVehicle {
     private int countofSpleppingPlaces;
     private boolean hasCargoRefrigerator;
     private int carrying;
@@ -57,5 +63,16 @@ public class Truck extends AbstractVehicle{
     @Override
     public int getWheelCount() {
         return 6;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(". ", Truck.class.getSimpleName() + "[", "]")
+                .add("countofSpleppingPlaces=" + countofSpleppingPlaces)
+                .add("hasCargoRefrigerator=" + hasCargoRefrigerator)
+                .add("carrying=" + carrying)
+                .add("automaticCoupler=" + automaticCoupler)
+                .add("tractorCrane=" + tractorCrane)
+                .toString();
     }
 }

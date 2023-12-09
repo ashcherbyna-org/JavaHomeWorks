@@ -1,4 +1,6 @@
-public class HomeFuel extends Truck{
+package vehicles;
+
+public class HomeFuel extends Truck {
     private boolean barrelOfFuel;
 
     private int barrelVolume;
@@ -56,5 +58,16 @@ public class HomeFuel extends Truck{
 
     public void setGrounding(boolean grounding) {
         this.grounding = grounding;
+    }
+
+    @Override
+    public String toString() {
+        return "HomeFuel{" +
+                "barrelOfFuel=" + barrelOfFuel +
+                ", barrelVolume=" + barrelVolume +
+                ", barrelNeck=" + barrelNeck +
+                ", drainer=" + drainer +
+                ", grounding=" + grounding +
+                "} " + super.toString();
     }
 }

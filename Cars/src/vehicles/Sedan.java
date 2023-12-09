@@ -1,4 +1,8 @@
-public class Sedan extends AbstractVehicle{
+package vehicles;
+
+import vehicles.abstractions.AbstractVehicle;
+
+public class Sedan extends AbstractVehicle {
     private boolean hasPassengerSeats;
     private boolean hasBabySeat;
     private boolean hasConvertibleRoof;
@@ -57,5 +61,17 @@ public class Sedan extends AbstractVehicle{
     @Override
     public int getWheelCount() {
         return 4;
+    }
+
+    @Override
+    public String toString() {
+        final var sb = new StringBuilder("Sedan{");
+        sb.append("hasPassengerSeats=").append(hasPassengerSeats);
+        sb.append(", hasBabySeat=").append(hasBabySeat);
+        sb.append(", hasConvertibleRoof=").append(hasConvertibleRoof);
+        sb.append(", ABS=").append(ABS);
+        sb.append(", luke=").append(luke);
+        sb.append('}');
+        return sb.toString();
     }
 }

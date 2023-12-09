@@ -1,3 +1,7 @@
+package vehicles.builders;
+
+import vehicles.Truck;
+
 public class TruckBuilder {
     private String model;
     private String vin;

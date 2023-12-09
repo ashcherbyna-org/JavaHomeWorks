@@ -1,4 +1,9 @@
-public class Bus extends AbstractVehicle implements PublicTransport{
+package vehicles;
+
+import vehicles.abstractions.AbstractVehicle;
+import vehicles.interfaces.PublicTransport;
+
+public class Bus extends AbstractVehicle implements PublicTransport {
 
     private boolean hasRamp;
     private boolean automaticDoors;
@@ -77,5 +82,16 @@ public class Bus extends AbstractVehicle implements PublicTransport{
     @Override
     public double calculateFare() {
         return 5;
+    }
+
+    @Override
+    public String toString() {
+        return "Bus{" +
+                "hasRamp=" + hasRamp +
+                ", automaticDoors=" + automaticDoors +
+                ", numberOfSeats=" + numberOfSeats +
+                ", cargoBelts=" + cargoBelts +
+                ", routeNumber=" + routeNumber +
+                '}';
     }
 }
