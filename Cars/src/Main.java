@@ -13,6 +13,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         createTruck();
+        createSedansFromFile();
+    }
+
+    //HW 7 read data from File (Csv)
+    private static void createSedansFromFile() {
         var dataFromScan = readFileUsingScanner(FILE_NAME);
         for (int a = 1; a < dataFromScan.length; a++) {
             var pieces = dataFromScan[a].split(";");
@@ -80,6 +85,7 @@ public class Main {
         }
     }
 
+    //HW 5 create builder
     private static void createTruck() {
         Truck carTransporter = new TruckBuilder()
                 .setModel("Kenworth")
