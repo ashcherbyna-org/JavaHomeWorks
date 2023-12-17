@@ -1,0 +1,6 @@
+sedanClass;model;VIN;Manufacturer;HasAirBags;IsAutomaticTransmission;HasPassengerSeats;HasBabySeat;HasConvertibleRoof;ABS;Luke
+LUXURY_CAR;Nissan Altima;1N4AL3AP9FC187754;Nissan;true;true;true;true;true;true;true
+ECONOMY_CAR;Toyota Corolla;2T1BURHEXJC103995;Toyota;true;false;true;false;false;true;false
+FAMILY_CAR;Honda Odyssey;5FNRL6H72GB001234;Honda;true;true;true;true;false;true;true
+OFFROAD;Jeep Wrangler;1C4BJWDG9HL527837;Jeep;true;true;true;true;true;true;false
+SPORTS_CAR;BMW M3;WBS8M9C51G5E712345;BMW;true;true;true;false;true;true;false

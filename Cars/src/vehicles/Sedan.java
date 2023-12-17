@@ -1,8 +1,10 @@
 package vehicles;
 
 import vehicles.abstractions.AbstractVehicle;
+import vehicles.enums.SedanClass;
 
 public class Sedan extends AbstractVehicle {
+    protected SedanClass sedanClass = null;
     private boolean hasPassengerSeats;
     private boolean hasBabySeat;
     private boolean hasConvertibleRoof;
