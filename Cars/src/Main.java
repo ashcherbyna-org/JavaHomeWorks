@@ -1,8 +1,9 @@
 import vehicles.Sedan;
-import vehicles.builders.TruckBuilder;
-import vehicles.Truck;
-import vehicles.models.*;
-
+import vehicles.models.EconomyCar;
+import vehicles.models.SportCar;
+import vehicles.models.OffRoad;
+import vehicles.models.LuxuryCar;
+import vehicles.models.FamilyCar;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        createTruck();
+        //createTruck();
         createSedansFromFile();
     }
 
@@ -86,23 +87,23 @@ public class Main {
     }
 
     //HW 5 create builder
-    private static void createTruck() {
-        Truck carTransporter = new TruckBuilder()
-                .setModel("Kenworth")
-                .setVIN("AS336667Y87")
-                .setManufacturer("USA")
-                .setHasAirBags(true)
-                .setIsAutomaticTransmission(false)
-                .setCountofSpleppingPlaces(2)
-                .setHasCargoRefrigerator(true)
-                .setCarrying(400)
-                .setAutomaticCoupler(true)
-                .setTractorCrane(true)
-                .createTruck();
-        System.out.printf("%s developed in %s with VIN %s", carTransporter.getModel(), carTransporter.getManufacturer(), carTransporter.getVIN());
-        System.out.println();
-        System.out.println(carTransporter);
-    }
+//    private static void createTruck() {
+//        Truck carTransporter = new TruckBuilder()
+//                .setModel("Kenworth")
+//                .setVIN("AS336667Y87")
+//                .setManufacturer("USA")
+//                .setHasAirBags(true)
+//                .setIsAutomaticTransmission(false)
+//                .setCountofSpleppingPlaces(2)
+//                .setHasCargoRefrigerator(true)
+//                .setCarrying(400)
+//                .setAutomaticCoupler(true)
+//                .setTractorCrane(true)
+//                .createTruck();
+//        System.out.printf("%s developed in %s with VIN %s", carTransporter.getModel(), carTransporter.getManufacturer(), carTransporter.getVIN());
+//        System.out.println();
+//        System.out.println(carTransporter);
+//    }
 
     private static final String FILE_NAME = "resoursces/cars.csv";
 

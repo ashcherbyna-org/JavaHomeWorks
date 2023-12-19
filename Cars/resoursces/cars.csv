@@ -4,3 +4,98 @@ ECONOMY_CAR;Toyota Corolla;2T1BURHEXJC103995;Toyota;true;false;true;false;false;
 FAMILY_CAR;Honda Odyssey;5FNRL6H72GB001234;Honda;true;true;true;true;false;true;true
 OFFROAD;Jeep Wrangler;1C4BJWDG9HL527837;Jeep;true;true;true;true;true;true;false
 SPORTS_CAR;BMW M3;WBS8M9C51G5E712345;BMW;true;true;true;false;true;true;false
+LUXURY_CAR;Mercedes-Benz S-Class;WDDUG8FB9FA189876;Mercedes-Benz;true;true;true;true;true;true;true
+ECONOMY_CAR;Ford Fiesta;3FADP4EJ0JM119876;Ford;true;false;true;false;false;true;false
+FAMILY_CAR;Chevrolet Traverse;1GNERHKW6KJ213456;Chevrolet;true;true;true;true;false;true;true
+OFFROAD;Toyota Land Cruiser;JTMHV05J5KJ092345;Toyota;true;true;true;true;true;true;false
+SPORTS_CAR;Porsche 911;WP0AB2A94JS123456;Porsche;true;true;true;false;true;true;false
+LUXURY_CAR;Audi A8;WAU8DAF81EN123456;Audi;true;true;true;true;true;true;true
+ECONOMY_CAR;Hyundai Elantra;5NPD74LF8KH123456;Hyundai;true;false;true;false;false;true;false
+FAMILY_CAR;Chrysler Pacifica;2C4RC1BGXKR123456;Chrysler;true;true;true;true;false;true;true
+OFFROAD;Land Rover Defender;SALGV5RV2KA123456;Land Rover;true;true;true;true;true;true;false
+SPORTS_CAR;Ferrari 488 GTB;ZFF79ALA9K0234567;Ferrari;true;true;true;false;true;true;false
+LUXURY_CAR;Lexus LS;JTHC71F25E5001234;Lexus;true;true;true;true;true;true;true
+ECONOMY_CAR;Volkswagen Golf;WVWZZZAUZGW123456;Volkswagen;true;false;true;false;false;true;false
+FAMILY_CAR;Subaru Ascent;4S4WMARD0L3401234;Subaru;true;true;true;true;false;true;true
+OFFROAD;Ford Bronco;1FTEW1EP4MKE12345;Ford;true;true;true;true;true;true;false
+SPORTS_CAR;Maserati GranTurismo;ZAM45VLA4G0134567;Maserati;true;true;true;false;true;true;false
+LUXURY_CAR;Cadillac CT6;1G6KR5R68LU123456;Cadillac;true;true;true;true;true;true;true
+ECONOMY_CAR;Kia Rio;3KPA25AB8LE123456;Kia;true;false;true;false;false;true;false
+FAMILY_CAR;Nissan Pathfinder;5N1DR2ANXLC123456;Nissan;true;true;true;true;false;true;true
+OFFROAD;Toyota 4Runner;JTEBU5JR2L5761234;Toyota;true;true;true;true;true;true;false
+SPORTS_CAR;Chevrolet Corvette;1G1YY22G3W5112345;Chevrolet;true;true;true;false;true;true;false
+LUXURY_CAR;Jaguar XJ;SAJWA1C73G8V12345;Jaguar;true;true;true;true;true;true;true
+ECONOMY_CAR;Mazda 3;JM1BPAMM2L1112345;Mazda;true;false;true;false;false;true;false
+FAMILY_CAR;Ford Explorer;1FM5K8D89KGA12345;Ford;true;true;true;true;false;true;true
+OFFROAD;Jeep Grand Cherokee;1C4RJFAG6LC123456;Jeep;true;true;true;true;true;true;false
+SPORTS_CAR;Aston Martin Vantage;SCFADSCG1KGC12345;Aston Martin;true;true;true;false;true;true;false
+LUXURY_CAR;Infiniti Q70;JN1BY1ARXKM123456;Infiniti;true;true;true;true;true;true;true
+ECONOMY_CAR;Honda Civic;2HGFC2F53KH123456;Honda;true;false;true;false;false;true;false
+FAMILY_CAR;Toyota Sienna;5TDDZ3DC4HS123456;Toyota;true;true;true;true;false;true;true
+OFFROAD;Land Rover Discovery;SALRG2RVXJA123456;Land Rover;true;true;true;true;true;true;false
+SPORTS_CAR;Lamborghini Huracan;ZHWUC1ZF2HLA12345;Lamborghini;true;true;true;false;true;true;false
+LUXURY_CAR;Lincoln Continental;1LN6L9NC4K5601234;Lincoln;true;true;true;true;true;true;true
+ECONOMY_CAR;Nissan Versa;3N1CN7AP8JL123456;Nissan;true;false;true;false;false;true;false
+FAMILY_CAR;Subaru Outback;4S4BSANC6K3201234;Subaru;true;true;true;true;false;true;true
+OFFROAD;Ford F-150 Raptor;1FTFW1RG6LFB12345;Ford;true;true;true;true;true;true;false
+LUXURY_CAR;Acura RLX;JH4KC1F54FC123456;Acura;true;true;true;true;true;true;true
+ECONOMY_CAR;Chevrolet Sonic;1G1JD6SB4K4101234;Chevrolet;true;false;true;false;false;true;false
+FAMILY_CAR;Hyundai Santa Fe;5NMS2CAD5KH123456;Hyundai;true;true;true;true;false;true;true
+OFFROAD;Land Rover Range Rover;SALGS2RKXKA123456;Land Rover;true;true;true;true;true;true;false
+SPORTS_CAR;Tesla Model S;5YJSA1E28JF123456;Tesla;true;true;true;false;true;true;false
+LUXURY_CAR;Volvo S90;LVY982AK8KP123456;Volvo;true;true;true;true;true;true;true
+ECONOMY_CAR;Kia Forte;3KPF34AD5KE123456;Kia;true;false;true;false;false;true;false
+FAMILY_CAR;Mitsubishi Outlander;JA4AD3A36KZ123456;Mitsubishi;true;true;true;true;false;true;true
+OFFROAD;Ford Ranger;1FTER4EH9KLA12345;Ford;true;true;true;true;true;true;false
+SPORTS_CAR;Jaguar F-Type;SAJDD1KV4KCK12345;Jaguar;true;true;true;false;true;true;false
+LUXURY_CAR;Lexus LC;JTHHP5AY4KA123456;Lexus;true;true;true;true;true;true;true
+ECONOMY_CAR;Honda Fit;3HGGK5H59KM123456;Honda;true;false;true;false;false;true;false
+FAMILY_CAR;Volkswagen Atlas;1V2HR2CA3KC123456;Volkswagen;true;true;true;true;false;true;true
+OFFROAD;Jeep Gladiator;1C6JJTBG5KL123456;Jeep;true;true;true;true;true;true;false
+SPORTS_CAR;Audi R8;WUASUAFG3K7901234;Audi;true;true;true;false;true;true;false
+LUXURY_CAR;BMW 7 Series;WBA7T4C50KGA12345;BMW;true;true;true;true;true;true;true
+ECONOMY_CAR;Toyota Yaris;3MYDLBYV5KY123456;Toyota;true;false;true;false;false;true;false
+FAMILY_CAR;Buick Enclave;5GAEVCKW7KJ123456;Buick;true;true;true;true;false;true;true
+OFFROAD;Toyota Tacoma;3TMCZ5AN4KM123456;Toyota;true;true;true;true;true;true;false
+SPORTS_CAR;Chevrolet Camaro;1G1FB1RS1K0101234;Chevrolet;true;true;true;false;true;true;false
+LUXURY_CAR;Mercedes-Benz E-Class;WDDZF8EB2KA123456;Mercedes-Benz;true;true;true;true;true;true;true
+ECONOMY_CAR;Subaru Impreza;4S3GTAA65K3731234;Subaru;true;false;true;false;false;true;false
+FAMILY_CAR;Nissan Murano;5N1AZ2MJ3KN123456;Nissan;true;true;true;true;false;true;true
+OFFROAD;Ram 1500;1C6SRFJT8KN123456;Ram;true;true;true;true;true;true;false
+SPORTS_CAR;Ford Mustang;1FA6P8TH9K5101234;Ford;true;true;true;false;true;true;false
+LUXURY_CAR;Porsche Panamera;WP0AA2A74KL123456;Porsche;true;true;true;true;true;true;true
+ECONOMY_CAR;Mazda CX-3;JM1DKDC71K1481234;Mazda;true;false;true;false;false;true;false
+FAMILY_CAR;Honda Pilot;5FNYF6H59KB123456;Honda;true;true;true;true;false;true;true
+OFFROAD;Subaru Crosstrek;JF2GTANC9K3271234;Subaru;true;true;true;true;true;true;false
+SPORTS_CAR;Ferrari F8 Tributo;ZFF90CLC5K0241234;Ferrari;true;true;true;false;true;true;false
+LUXURY_CAR;Aston Martin DB11;SCFRMFAV1KGL12345;Aston Martin;true;true;true;true;true;true;true
+ECONOMY_CAR;Ford Focus;1FADP3F28KL123456;Ford;true;false;true;false;false;true;false
+FAMILY_CAR;Chevrolet Equinox;2GNAXSEV7K6301234;Chevrolet;true;true;true;true;false;true;true
+OFFROAD;Jeep Cherokee;1C4PJMBX7KD123456;Jeep;true;true;true;true;true;true;false
+SPORTS_CAR;Lamborghini Aventador;ZHWUG4ZD1KLA12345;Lamborghini;true;true;true;false;true;true;false
+LUXURY_CAR;Infiniti Q60;JN1FV7EKXKM123456;Infiniti;true;true;true;true;true;true;true
+ECONOMY_CAR;Kia Soul;KNDJP3A5XK123456;Kia;true;false;true;false;false;true;false
+FAMILY_CAR;Toyota Highlander;5TDDGRFH2KS123456;Toyota;true;true;true;true;false;true;true
+OFFROAD;Chevrolet Colorado;1GCGSCEN1K1301234;Chevrolet;true;true;true;true;true;true;false
+SPORTS_CAR;McLaren GT;SBM21DAA1KGA12345;McLaren;true;true;true;false;true;true;false
+FAMILY_CAR;Jeep Compass;3C4NJCBB2KT123456;Jeep;true;true;true;true;false;true;true
+OFFROAD;Toyota Tundra;5TFDY5F1XKX123456;Toyota;true;true;true;true;true;true;false
+SPORTS_CAR;Audi RS5;WUAPWAF53K7001234;Audi;true;true;true;false;true;true;false
+LUXURY_CAR;BMW X5;5UXCR6C58KLU12345;BMW;true;true;true;true;true;true;true
+ECONOMY_CAR;Kia Optima;5XXGT4L31KG123456;Kia;true;false;true;false;false;true;false
+FAMILY_CAR;Nissan Rogue;5N1AT3CA2LC123456;Nissan;true;true;true;true;false;true;true
+OFFROAD;Ram 2500;3C6UR5CL4KG123456;Ram;true;true;true;true;true;true;false
+SPORTS_CAR;Ferrari Portofino;ZFF77XJA3K0234567;Ferrari;true;true;true;false;true;true;false
+LUXURY_CAR;Mercedes-Benz GLC;WDC0G4KB1KV123456;Mercedes-Benz;true;true;true;true;true;true;true
+ECONOMY_CAR;Ford Fiesta;3FADP4EJXKM123456;Ford;true;false;true;false;false;true;false
+FAMILY_CAR;Chevrolet Tahoe;1GNSCBKC2KR123456;Chevrolet;true;true;true;true;false;true;true
+OFFROAD;Jeep Renegade;ZACCJABB0KPK12345;Jeep;true;true;true;true;true;true;false
+SPORTS_CAR;Aston Martin DBS;SCFFACDNXKGB12345;Aston Martin;true;true;true;false;true;true;false
+LUXURY_CAR;Infiniti QX80;JN8AZ2NE2K9251234;Infiniti;true;true;true;true;true;true;false
+ECONOMY_CAR;Honda Accord;1HGCV1F11KA123456;Honda;true;false;true;false;false;true;false
+FAMILY_CAR;Toyota RAV4;2T3ZFREV8KW123456;Toyota;true;true;true;true;false;true;true
+OFFROAD;GMC Sierra;1GTU9FEL1KZ123456;GMC;true;true;true;true;true;true;false
+SPORTS_CAR;McLaren 570S;SBM13DAA1KGA12345;McLaren;true;true;true;false;true;true;false
+LUXURY_CAR;Jaguar F-PACE;SADCL2FX2KZ123456;Jaguar;true;true;true;true;true;true;true
+ECONOMY_CAR;Subaru Legacy;4S3BNBL62K3012345;Subaru;true;false;true;false;false;true;false
+FAMILY_CAR;Mazda CX-5;JM3KFBCM2K0431234;Mazda;true;true;true;true;false;true;true
