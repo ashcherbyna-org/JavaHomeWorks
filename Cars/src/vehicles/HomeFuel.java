@@ -11,14 +11,15 @@ public class HomeFuel extends Truck {
 
     private boolean grounding;
 
-    public HomeFuel(String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, int countofSpleppingPlaces, boolean hasCargoRefrigerator, int carrying, boolean automaticCoupler, boolean tractorCrane, boolean barrelOfFuel, int barrelVolume, boolean barrelNeck, boolean drainer, boolean grounding) {
-        super(model, VIN, manufacturer, hasAirBags, isAutomaticTransmission, countofSpleppingPlaces, hasCargoRefrigerator, carrying, automaticCoupler, tractorCrane);
+    public HomeFuel(int ID, String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, int countofSpleppingPlaces, boolean hasCargoRefrigerator, int carrying, boolean automaticCoupler, boolean tractorCrane, boolean barrelOfFuel, int barrelVolume, boolean barrelNeck, boolean drainer, boolean grounding) {
+        super(ID, model, VIN, manufacturer, hasAirBags, isAutomaticTransmission, countofSpleppingPlaces, hasCargoRefrigerator, carrying, automaticCoupler, tractorCrane);
         this.barrelOfFuel = barrelOfFuel;
         this.barrelVolume = barrelVolume;
         this.barrelNeck = barrelNeck;
         this.drainer = drainer;
         this.grounding = grounding;
     }
+
 
     public boolean isBarrelOfFuel() {
         return barrelOfFuel;

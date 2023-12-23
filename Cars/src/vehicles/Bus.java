@@ -11,8 +11,8 @@ public class Bus extends AbstractVehicle implements PublicTransport {
     private boolean cargoBelts;
     private boolean routeNumber;
 
-    public Bus(String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, boolean hasRamp, boolean automaticDoors, int numberOfSeats, boolean cargoBelts, boolean routeNumber) {
-        super(model, VIN, manufacturer, hasAirBags, isAutomaticTransmission);
+    public Bus(int ID, String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, boolean hasRamp, boolean automaticDoors, int numberOfSeats, boolean cargoBelts, boolean routeNumber) {
+        super(ID, model, VIN, manufacturer, hasAirBags, isAutomaticTransmission);
         this.hasRamp = hasRamp;
         this.automaticDoors = automaticDoors;
         this.numberOfSeats = numberOfSeats;

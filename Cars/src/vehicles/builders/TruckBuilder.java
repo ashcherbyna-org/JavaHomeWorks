@@ -3,6 +3,7 @@ package vehicles.builders;
 import vehicles.Truck;
 
 public class TruckBuilder {
+    private int ID;
     private String model;
     private String vin;
     private String manufacturer;
@@ -65,6 +66,6 @@ public class TruckBuilder {
     }
 
     public Truck createTruck() {
-        return new Truck(model, vin, manufacturer, hasAirBags, isAutomaticTransmission, countofSpleppingPlaces, hasCargoRefrigerator, carrying, automaticCoupler, tractorCrane);
+        return new Truck(ID, model, vin, manufacturer, hasAirBags, isAutomaticTransmission, countofSpleppingPlaces, hasCargoRefrigerator, carrying, automaticCoupler, tractorCrane);
     }
 }

@@ -11,8 +11,8 @@ public class Truck extends AbstractVehicle {
     private boolean automaticCoupler;
     private boolean tractorCrane;
 
-    public Truck(String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, int countofSpleppingPlaces, boolean hasCargoRefrigerator, int carrying, boolean automaticCoupler, boolean tractorCrane) {
-        super(model, VIN, manufacturer, hasAirBags, isAutomaticTransmission);
+    public Truck(int ID, String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, int countofSpleppingPlaces, boolean hasCargoRefrigerator, int carrying, boolean automaticCoupler, boolean tractorCrane) {
+        super(ID, model, VIN, manufacturer, hasAirBags, isAutomaticTransmission);
         this.countofSpleppingPlaces = countofSpleppingPlaces;
         this.hasCargoRefrigerator = hasCargoRefrigerator;
         this.carrying = carrying;

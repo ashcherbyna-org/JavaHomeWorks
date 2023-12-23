@@ -9,14 +9,15 @@ public class Motorcycle extends AbstractVehicle {
     private boolean verticalFit;
     private boolean helmet;
 
-    public Motorcycle(String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, boolean sideCar, boolean hasTrunk, boolean footrests, boolean verticalFit, boolean helmet) {
-        super(model, VIN, manufacturer, hasAirBags, isAutomaticTransmission);
+    public Motorcycle(int ID, String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, boolean sideCar, boolean hasTrunk, boolean footrests, boolean verticalFit, boolean helmet) {
+        super(ID, model, VIN, manufacturer, hasAirBags, isAutomaticTransmission);
         this.sideCar = sideCar;
         this.hasTrunk = hasTrunk;
         this.footrests = footrests;
         this.verticalFit = verticalFit;
         this.helmet = helmet;
     }
+
 
     public boolean isSideCar() {
         return sideCar;

@@ -1,4 +1,5 @@
 import vehicles.Sedan;
+import vehicles.abstractions.AbstractVehicle;
 import vehicles.models.EconomyCar;
 import vehicles.models.SportCar;
 import vehicles.models.OffRoad;
@@ -6,83 +7,91 @@ import vehicles.models.LuxuryCar;
 import vehicles.models.FamilyCar;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
         //createTruck();
-        createSedansFromFile();
+       var sedanList = createSedansFromFile();
+       var sedanstream = sedanList.stream();
+       var sedanmap = sedanstream
+                .sorted(Comparator.comparingInt(AbstractVehicle::getID))
+                .skip(12)
+                .limit(25)
+                .filter(sedan -> sedan.getID()%2 == 0)
+                .collect(Collectors.toMap(Sedan::getID, Sedan::getModel));
+        System.out.println(sedanmap);
     }
 
     //HW 7 read data from File (Csv)
-    private static void createSedansFromFile() {
+    private static ArrayList<Sedan> createSedansFromFile() {
+        var sedans = new ArrayList<Sedan>();
         var dataFromScan = readFileUsingScanner(FILE_NAME);
         for (int a = 1; a < dataFromScan.length; a++) {
             var pieces = dataFromScan[a].split(";");
-            System.out.println(pieces[0]);
-            Sedan sedan = null;
-            switch (pieces[0]) {
-                case "ECONOMY_CAR":
-                    sedan = new EconomyCar(pieces[1],
-                            pieces[2], pieces[3],
-                            Boolean.parseBoolean(pieces[4]),
-                            Boolean.parseBoolean(pieces[5]),
-                            Boolean.parseBoolean(pieces[6]),
-                            Boolean.parseBoolean(pieces[7]),
-                            Boolean.parseBoolean(pieces[8]),
-                            Boolean.parseBoolean(pieces[9]),
-                            Boolean.parseBoolean(pieces[10]));
-                    break;
-                case "FAMILY_CAR":
-                    sedan = new FamilyCar(pieces[1],
-                        pieces[2], pieces[3],
-                        Boolean.parseBoolean(pieces[4]),
+            Sedan sedan = getSedanFromPeaces(pieces);
+            sedans.add(sedan);
+        }
+        return sedans;
+    }
+
+    private static Sedan getSedanFromPeaces(String[] pieces) {
+        switch (pieces[1]) {
+            case "ECONOMY_CAR":
+                return new EconomyCar(Integer.parseInt(pieces[0]),
+                        pieces[2], pieces[3], pieces[4],
                         Boolean.parseBoolean(pieces[5]),
                         Boolean.parseBoolean(pieces[6]),
                         Boolean.parseBoolean(pieces[7]),
                         Boolean.parseBoolean(pieces[8]),
                         Boolean.parseBoolean(pieces[9]),
+                        Boolean.parseBoolean(pieces[10]),
                         Boolean.parseBoolean(pieces[10]));
-                    break;
-                case "LUXURY_CAR":
-                    sedan = new LuxuryCar(pieces[1],
-                            pieces[2],pieces[3],
-                            Boolean.parseBoolean(pieces[4]),
-                            Boolean.parseBoolean(pieces[5]),
-                            Boolean.parseBoolean(pieces[6]),
-                            Boolean.parseBoolean(pieces[7]),
-                            Boolean.parseBoolean(pieces[8]),
-                            Boolean.parseBoolean(pieces[9]),
-                            Boolean.parseBoolean(pieces[10]));
-                    break;
-                case "OFFROAD":
-                    sedan = new OffRoad(pieces[1],
-                            pieces[2],pieces[3],
-                            Boolean.parseBoolean(pieces[4]),
-                            Boolean.parseBoolean(pieces[5]),
-                            Boolean.parseBoolean(pieces[6]),
-                            Boolean.parseBoolean(pieces[7]),
-                            Boolean.parseBoolean(pieces[8]),
-                            Boolean.parseBoolean(pieces[9]),
-                            Boolean.parseBoolean(pieces[10]));
-                    break;
-                case "SPORTS_CAR":
-                    sedan = new SportCar(pieces[1],
-                            pieces[2],pieces[3],
-                            Boolean.parseBoolean(pieces[4]),
-                            Boolean.parseBoolean(pieces[5]),
-                            Boolean.parseBoolean(pieces[6]),
-                            Boolean.parseBoolean(pieces[7]),
-                            Boolean.parseBoolean(pieces[8]),
-                            Boolean.parseBoolean(pieces[9]),
-                            Boolean.parseBoolean(pieces[10]));
-                    break;
+            case "FAMILY_CAR":
+                return new FamilyCar(Integer.parseInt(pieces[0]),
+                        pieces[2], pieces[3], pieces[4],
+                        Boolean.parseBoolean(pieces[5]),
+                        Boolean.parseBoolean(pieces[6]),
+                        Boolean.parseBoolean(pieces[7]),
+                        Boolean.parseBoolean(pieces[8]),
+                        Boolean.parseBoolean(pieces[9]),
+                        Boolean.parseBoolean(pieces[10]),
+                        Boolean.parseBoolean(pieces[10]));
+            case "LUXURY_CAR":
+                return new LuxuryCar(Integer.parseInt(pieces[0]),
+                        pieces[2], pieces[3], pieces[4],
+                        Boolean.parseBoolean(pieces[5]),
+                        Boolean.parseBoolean(pieces[6]),
+                        Boolean.parseBoolean(pieces[7]),
+                        Boolean.parseBoolean(pieces[8]),
+                        Boolean.parseBoolean(pieces[9]),
+                        Boolean.parseBoolean(pieces[10]),
+                        Boolean.parseBoolean(pieces[10]));
+            case "OFFROAD":
+                return new OffRoad(Integer.parseInt(pieces[0]),
+                        pieces[2], pieces[3], pieces[4],
+                        Boolean.parseBoolean(pieces[5]),
+                        Boolean.parseBoolean(pieces[6]),
+                        Boolean.parseBoolean(pieces[7]),
+                        Boolean.parseBoolean(pieces[8]),
+                        Boolean.parseBoolean(pieces[9]),
+                        Boolean.parseBoolean(pieces[10]),
+                        Boolean.parseBoolean(pieces[10]));
 
-            }
-            System.out.println(sedan.toString());
+            case "SPORTS_CAR":
+                return new SportCar(Integer.parseInt(pieces[0]),
+                        pieces[2], pieces[3], pieces[4],
+                        Boolean.parseBoolean(pieces[5]),
+                        Boolean.parseBoolean(pieces[6]),
+                        Boolean.parseBoolean(pieces[7]),
+                        Boolean.parseBoolean(pieces[8]),
+                        Boolean.parseBoolean(pieces[9]),
+                        Boolean.parseBoolean(pieces[10]),
+                        Boolean.parseBoolean(pieces[10]));
+
+            default:
+                return null;
         }
     }
 
@@ -131,6 +140,7 @@ public class Main {
         scanner.close();
         return Arrays.copyOf(data.toArray(), data.size(), String[].class);
     }
+
 }
 
 

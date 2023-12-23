@@ -11,14 +11,15 @@ public class Sedan extends AbstractVehicle {
     private boolean ABS;
     private boolean luke;
 
-    public Sedan(String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, boolean hasPassengerSeats, boolean hasBabySeat, boolean hasConvertibleRoof, boolean ABS, boolean luke) {
-        super(model, VIN, manufacturer, hasAirBags, isAutomaticTransmission);
+    public Sedan(int ID, String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission, boolean hasPassengerSeats, boolean hasBabySeat, boolean hasConvertibleRoof, boolean ABS, boolean luke) {
+        super(ID, model, VIN, manufacturer, hasAirBags, isAutomaticTransmission);
         this.hasPassengerSeats = hasPassengerSeats;
         this.hasBabySeat = hasBabySeat;
         this.hasConvertibleRoof = hasConvertibleRoof;
         this.ABS = ABS;
         this.luke = luke;
     }
+
 
     public boolean isHasPassengerSeats() {
         return hasPassengerSeats;
@@ -68,7 +69,8 @@ public class Sedan extends AbstractVehicle {
     @Override
     public String toString() {
         final var sb = new StringBuilder("Sedan{");
-        sb.append("hasPassengerSeats=").append(hasPassengerSeats);
+        sb.append("Id=").append(getID());
+        sb.append(", hasPassengerSeats=").append(hasPassengerSeats);
         sb.append(", hasBabySeat=").append(hasBabySeat);
         sb.append(", hasConvertibleRoof=").append(hasConvertibleRoof);
         sb.append(", ABS=").append(ABS);
