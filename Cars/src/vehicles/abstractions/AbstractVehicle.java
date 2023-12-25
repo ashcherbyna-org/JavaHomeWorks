@@ -17,13 +17,6 @@ public abstract class AbstractVehicle {
         this.ID = ID;
     }
 
-    @Override
-    public String toString() {
-        return "AbstractVehicle{" +
-                "ID=" + ID +
-                '}';
-    }
-
     public AbstractVehicle(int ID, String model, String VIN, String manufacturer, boolean hasAirBags, boolean isAutomaticTransmission) {
         this.ID = ID;
         this.model = model;

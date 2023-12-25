@@ -5,6 +5,7 @@ import vehicles.models.SportCar;
 import vehicles.models.OffRoad;
 import vehicles.models.LuxuryCar;
 import vehicles.models.FamilyCar;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -13,15 +14,23 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         //createTruck();
-       var sedanList = createSedansFromFile();
-       var sedanstream = sedanList.stream();
-       var sedanmap = sedanstream
+        var sedanList = createSedansFromFile();
+        System.out.println("SortSkip and SortOut");
+        sedanList.stream()
                 .sorted(Comparator.comparingInt(AbstractVehicle::getID))
                 .skip(12)
                 .limit(25)
-                .filter(sedan -> sedan.getID()%2 == 0)
-                .collect(Collectors.toMap(Sedan::getID, Sedan::getModel));
-        System.out.println(sedanmap);
+                .forEach(sedan -> System.out.println(sedan));
+        System.out.println("Filter Out");
+        sedanList.stream()
+                .filter(sedan -> sedan.getID() % 2 == 0)
+                .limit(12)
+                .forEach(sedan -> System.out.println(sedan));
+        System.out.println("Map");
+
+        var mapStream = sedanList.stream()
+                .collect(Collectors.toMap(AbstractVehicle::getID, AbstractVehicle::getModel));
+        System.out.println(mapStream);
     }
 
     //HW 7 read data from File (Csv)
