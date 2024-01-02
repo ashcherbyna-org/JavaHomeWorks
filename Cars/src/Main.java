@@ -1,3 +1,4 @@
+import helper.Duration;
 import vehicles.Sedan;
 import vehicles.abstractions.AbstractVehicle;
 import vehicles.models.EconomyCar;
@@ -11,10 +12,42 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
 public class Main {
     public static void main(String[] args) {
         //createTruck();
-        var sedanList = createSedansFromFile();
+        var startReadFile = System.currentTimeMillis();
+        var dataFromScan = readFileUsingScanner(FILE_NAME);
+        var endReadFile = System.currentTimeMillis();
+        var durationReadFile = new Duration(endReadFile - startReadFile, "Duration of read from file");
+
+        var startCreateObjectivesFromFile = System.currentTimeMillis();
+        var sedanList = createSedansFromFile(dataFromScan);
+        var endCreateObjectivesFromFile = System.currentTimeMillis();
+        var durationCreateObjectivesFromFile = new Duration(endCreateObjectivesFromFile - startCreateObjectivesFromFile, "Duration of objective creation");
+
+        var startStream = System.currentTimeMillis();
+        streams(sedanList);
+        var endStream = System.currentTimeMillis();
+        var durationStream = new Duration(endStream - startStream, "Duration of Stream");
+
+        ArrayList<Duration> durations = new ArrayList<>();
+        durations.add(durationReadFile);
+        durations.add(durationCreateObjectivesFromFile);
+        durations.add(durationStream);
+
+        durations.stream()
+                .sorted(Comparator.comparingLong(Duration::getTime))
+                .forEach(pair -> System.out.println(pair.getName() + " " + pair.getTime() + "ms"));
+
+        Date date1 = new  Date(2023, Calendar.NOVEMBER, 1, 0, 0);
+        Date date2 = new Date(2024, Calendar.FEBRUARY, 2, 0, 0);
+        var countOfMs = date2.getTime() - date1.getTime();
+        var days = countOfMs /(1000 * 60 * 60 * 24);
+        System.out.println("Difference in days: " + days + " days");
+    }
+
+    private static void streams(ArrayList<Sedan> sedanList) {
         System.out.println("SortSkip and SortOut");
         sedanList.stream()
                 .sorted(Comparator.comparingInt(AbstractVehicle::getID))
@@ -34,9 +67,8 @@ public class Main {
     }
 
     //HW 7 read data from File (Csv)
-    private static ArrayList<Sedan> createSedansFromFile() {
+    private static ArrayList<Sedan> createSedansFromFile(String[] dataFromScan) {
         var sedans = new ArrayList<Sedan>();
-        var dataFromScan = readFileUsingScanner(FILE_NAME);
         for (int a = 1; a < dataFromScan.length; a++) {
             var pieces = dataFromScan[a].split(";");
             Sedan sedan = getSedanFromPeaces(pieces);
@@ -144,13 +176,9 @@ public class Main {
             }
 
         } while (!finish);
-
-
         scanner.close();
         return Arrays.copyOf(data.toArray(), data.size(), String[].class);
     }
-
 }
-
 
 
