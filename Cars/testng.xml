@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
+
+<suite name="TestSuitForVehicles" verbose="1" thread-count="3" parallel="true">
+ 
+    <groups>
+        <run>
+            <include name="bus"></include>
+            <include name="motorcycle"></include>
+            <include name="homefuel"></include>
+        </run>
+    </groups>
+    <test name="TestVehicles1">
+        <classes>
+            <class name="BusTest"/>
+            <class name="HomeFuelTest"/>
+        </classes>
+    </test>
+
+    <test name="TestVehicles2">
+        <classes>
+            <class name="MotorcycleTest" />
+        </classes>
+    </test>
+</suite>
