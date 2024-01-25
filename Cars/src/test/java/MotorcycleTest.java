@@ -2,7 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import vehicles.Motorcycle;
 
-@Test(groups = "motorcycle")
+
 public class MotorcycleTest {
     @BeforeTest
     public void beforeTest() {
@@ -14,29 +14,35 @@ public class MotorcycleTest {
         System.out.println("MotorcycleTest::beforeMethod @" + Thread.currentThread().getName());
     }
 
+    @Test(groups = {"motorcycle"})
     public void hasSideCar() {
         var newmotorcycle = new Motorcycle(2, "Sport", "DF57733843748", "Harley", true, true, false, false, true, false, false);
         Assert.assertEquals(newmotorcycle.isSideCar(), false);
+        System.out.println("MotorcycleTest::hasSideCar @" + Thread.currentThread().getName());
     }
-
+    @Test(groups = {"motorcycle"})
     public void checkHasTrunk() {
         var newmotorcycle = new Motorcycle(2, "Sport", "DF57733843748", "Harley", true, true, false, false, true, false, false);
         Assert.assertEquals(newmotorcycle.isHasTrunk(), false);
+        System.out.println("MotorcycleTest::checkHasTrunk @" + Thread.currentThread().getName());
     }
-
+    @Test(groups = {"motorcycle"})
     public void hasFootrests() {
         var newmotorcycle = new Motorcycle(2, "Sport", "DF57733843748", "Harley", true, true, false, false, true, false, false);
         Assert.assertEquals(newmotorcycle.isFootrests(), true);
+        System.out.println("MotorcycleTest::hasFootrests @" + Thread.currentThread().getName());
     }
-
+    @Test(groups = {"motorcycle"})
     public void hasVerticalFit() {
         var newmotorcycle = new Motorcycle(2, "Sport", "DF57733843748", "Harley", true, true, false, false, true, false, false);
         Assert.assertEquals(newmotorcycle.isVerticalFit(), false);
+        System.out.println("MotorcycleTest::hasVerticalFit @" + Thread.currentThread().getName());
     }
-
+    @Test(groups = {"motorcycle"})
     public void hasHelmet() {
         var newmotorcycle = new Motorcycle(2, "Sport", "DF57733843748", "Harley", true, true, false, false, true, false, false);
         Assert.assertEquals(newmotorcycle.isHelmet(), false);
+        System.out.println("MotorcycleTest::hasHelmet @" + Thread.currentThread().getName());
     }
 
     @AfterTest

@@ -4,9 +4,9 @@
  
     <groups>
         <run>
-            <include name="bus"></include>
-            <include name="motorcycle"></include>
-            <include name="homefuel"></include>
+            <include name="bus"/>
+            <include name="motorcycle"/>
+            <include name="homefuel"/>
         </run>
     </groups>
     <test name="TestVehicles1">
