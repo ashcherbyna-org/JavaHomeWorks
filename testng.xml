@@ -25,4 +25,9 @@
             <class name="MotorcycleTest" />
         </classes>
     </test>
+    <test name="APICarTest">
+        <classes>
+            <class name="car.api.tests.CarTest" />
+        </classes>
+    </test>
 </suite>

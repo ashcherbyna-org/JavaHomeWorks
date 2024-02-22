@@ -1,4 +1,3 @@
-import helper.Duration;
 import vehicles.Sedan;
 import vehicles.abstractions.AbstractVehicle;
 import vehicles.models.EconomyCar;
@@ -9,42 +8,31 @@ import vehicles.models.FamilyCar;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-
 public class Main {
+    private static Logger logger;
+
+
+
     public static void main(String[] args) {
+
+        var loggerconfig = System.getenv("FILE_NAME");
+        System.setProperty("java.util.logging.config.file", loggerconfig);
+        logger = Logger.getLogger(Main.class.getName());
+        logger.log(Level.CONFIG, "Read data from " + FILE_NAME);
+
         //createTruck();
-        var startReadFile = System.currentTimeMillis();
         var dataFromScan = readFileUsingScanner(FILE_NAME);
-        var endReadFile = System.currentTimeMillis();
-        var durationReadFile = new Duration(endReadFile - startReadFile, "Duration of read from file");
-
-        var startCreateObjectivesFromFile = System.currentTimeMillis();
         var sedanList = createSedansFromFile(dataFromScan);
-        var endCreateObjectivesFromFile = System.currentTimeMillis();
-        var durationCreateObjectivesFromFile = new Duration(endCreateObjectivesFromFile - startCreateObjectivesFromFile, "Duration of objective creation");
-
-        var startStream = System.currentTimeMillis();
-        streams(sedanList);
-        var endStream = System.currentTimeMillis();
-        var durationStream = new Duration(endStream - startStream, "Duration of Stream");
-
-        ArrayList<Duration> durations = new ArrayList<>();
-        durations.add(durationReadFile);
-        durations.add(durationCreateObjectivesFromFile);
-        durations.add(durationStream);
-
-        durations.stream()
-                .sorted(Comparator.comparingLong(Duration::getTime))
-                .forEach(pair -> System.out.println(pair.getName() + " " + pair.getTime() + "ms"));
-
-        Date date1 = new  Date(2023, Calendar.NOVEMBER, 1, 0, 0);
-        Date date2 = new Date(2024, Calendar.FEBRUARY, 2, 0, 0);
-        var countOfMs = date2.getTime() - date1.getTime();
-        var days = countOfMs /(1000 * 60 * 60 * 24);
-        System.out.println("Difference in days: " + days + " days");
+        logger.log(Level.CONFIG, "Count of created cars " + sedanList.size());
     }
 
     private static void streams(ArrayList<Sedan> sedanList) {
@@ -80,6 +68,7 @@ public class Main {
     private static Sedan getSedanFromPeaces(String[] pieces) {
         switch (pieces[1]) {
             case "ECONOMY_CAR":
+                logger.log(Level.SEVERE, "Economy cars");
                 return new EconomyCar(Integer.parseInt(pieces[0]),
                         pieces[2], pieces[3], pieces[4],
                         Boolean.parseBoolean(pieces[5]),
@@ -90,6 +79,7 @@ public class Main {
                         Boolean.parseBoolean(pieces[10]),
                         Boolean.parseBoolean(pieces[10]));
             case "FAMILY_CAR":
+                logger.log(Level.WARNING, "Family cars");
                 return new FamilyCar(Integer.parseInt(pieces[0]),
                         pieces[2], pieces[3], pieces[4],
                         Boolean.parseBoolean(pieces[5]),
@@ -100,6 +90,7 @@ public class Main {
                         Boolean.parseBoolean(pieces[10]),
                         Boolean.parseBoolean(pieces[10]));
             case "LUXURY_CAR":
+                logger.log(Level.INFO, "Luxury cars");
                 return new LuxuryCar(Integer.parseInt(pieces[0]),
                         pieces[2], pieces[3], pieces[4],
                         Boolean.parseBoolean(pieces[5]),
@@ -110,6 +101,7 @@ public class Main {
                         Boolean.parseBoolean(pieces[10]),
                         Boolean.parseBoolean(pieces[10]));
             case "OFFROAD":
+                logger.log(Level.FINE, "Offroad cars");
                 return new OffRoad(Integer.parseInt(pieces[0]),
                         pieces[2], pieces[3], pieces[4],
                         Boolean.parseBoolean(pieces[5]),
@@ -121,6 +113,7 @@ public class Main {
                         Boolean.parseBoolean(pieces[10]));
 
             case "SPORTS_CAR":
+                logger.log(Level.FINER, "Sport cars");
                 return new SportCar(Integer.parseInt(pieces[0]),
                         pieces[2], pieces[3], pieces[4],
                         Boolean.parseBoolean(pieces[5]),
@@ -136,26 +129,7 @@ public class Main {
         }
     }
 
-    //HW 5 create builder
-//    private static void createTruck() {
-//        Truck carTransporter = new TruckBuilder()
-//                .setModel("Kenworth")
-//                .setVIN("AS336667Y87")
-//                .setManufacturer("USA")
-//                .setHasAirBags(true)
-//                .setIsAutomaticTransmission(false)
-//                .setCountofSpleppingPlaces(2)
-//                .setHasCargoRefrigerator(true)
-//                .setCarrying(400)
-//                .setAutomaticCoupler(true)
-//                .setTractorCrane(true)
-//                .createTruck();
-//        System.out.printf("%s developed in %s with VIN %s", carTransporter.getModel(), carTransporter.getManufacturer(), carTransporter.getVIN());
-//        System.out.println();
-//        System.out.println(carTransporter);
-//    }
-
-    private static final String FILE_NAME = "resoursces/cars.csv";
+    private static final String FILE_NAME = "src/main/resources/cars.csv";
 
     static String[] readFileUsingScanner(String filename) {
         ArrayList<String> data = new ArrayList<String>();
